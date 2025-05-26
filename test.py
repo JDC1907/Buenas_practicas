@@ -65,7 +65,6 @@ class Student:
             except IndexError:
                 print(f"Error: Index {value_or_index} out of range.")
                 return
-        
         # Intentamos eliminar por valor
         if isinstance(value_or_index, (int, float)):
             if value_or_index in self.gradez:
@@ -74,7 +73,10 @@ class Student:
             else:
                 print(f"Error: Grade value {value_or_index} not found.")
         else:
-            print("Error: Invalid argument for deleteGrade. Must be int (index) or float/int (value).")
+            print(
+                "Error: Invalid argument for deleteGrade. Must be int (index) "
+                "or float/int (value)."
+            )
 
     def report(self):
         print(f"ID: {self.id}")
